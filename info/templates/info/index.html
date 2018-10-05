@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'info/style.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1> WELCOME HOME USER</h1>
+
+    <h3>LIST OF STUDENTS REGISTERED FOR THE SHOW</h3>
+
+    {% if profile %}
+        <ul>
+        {% for student in profile %}
+       <li><p>NAME: {{ student.name }}</p></li>
+       <li>AGE:  {{ student.age }}</li>
+       <li> LOCATION:{{ student.location }}</li>
+       <li>EMAIL: {{ student.email }}</li><br>
+        {% endfor %}
+        </ul>
+
+        <h3>ADD MORE RECORDS </h3>
+    {% else %}
+        <p>no records available register below to add records</p>
+        <hr>
+    {% endif %}
+
+        <form action="" method="post">
+
+        {% csrf_token %}
+        {{ form }}
+
+        <input type="submit" value="submit">
+</form>
+
+  <!--<a class="text-warning" href="">view students</a>-->
+    {% block content%}
+    {% endblock %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+ul{
+    list-style: none;
+}
+/*.container{
+    text-align: center;
+}*/
+body{
+    background-color:beige;
+    font-family: "Helvetica Neue", Helvetica-, Arial, sans-serif;
+}
+form input {
+    display: inline;
+}
