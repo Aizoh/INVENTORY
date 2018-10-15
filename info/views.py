@@ -25,3 +25,8 @@ def index(request):
         return render(request, 'info/index.html', context)
 
 
+# this is displayed as the first page of the site
+
+
+def first(request):
+    return render(request, 'info/first.html')
