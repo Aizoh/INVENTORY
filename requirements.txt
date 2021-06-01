@@ -9,7 +9,7 @@ postgres==2.2.2
 psycopg2-binary==2.7.5
 pytz==2018.3
 requests==2.19.1
-urllib3==1.23
+urllib3==1.26.5
 virtualenv==15.1.0
 virtualenvwrapper-win==1.2.5
 yarg==0.1.9
